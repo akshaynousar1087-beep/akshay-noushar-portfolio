@@ -372,3 +372,18 @@
 @media(prefers-reduced-motion:reduce){
   .gallery-preview .glass-gallery-ui::before,.gallery-main{animation:none}
 }
+
+/* Final custom preview artwork — 2026-08-11 */
+.video-preview::before,
+.gallery-preview::before{
+  filter:none !important;
+  transform:none !important;
+  background-size:cover !important;
+  background-position:center !important;
+}
+.video-preview::before{background-image:url('assets/video-preview.jpeg') !important;}
+.gallery-preview::before{background-image:url('assets/gallery-preview.jpeg') !important;}
+.video-preview::after,
+.gallery-preview::after{background:linear-gradient(to top,rgba(6,6,6,.18),transparent 42%) !important;}
+.media-card:hover .video-preview::before,
+.media-card:hover .gallery-preview::before{transform:scale(1.025) !important;filter:none !important;}
