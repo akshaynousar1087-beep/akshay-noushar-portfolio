@@ -76,3 +76,103 @@
   .media-action{width:32px;height:32px;right:10px;bottom:10px}
   .gallery-art{inset:12px 52px 12px 12px}
 }
+
+
+/* FINAL MOTION SYSTEM — common animated preview language */
+.media-card .media-preview{
+  background:#11120e!important;
+  overflow:hidden;
+}
+.media-card .media-preview::before,
+.media-card .media-preview::after{
+  display:none!important;
+}
+.gallery-preview,
+.archive-preview{
+  background:#11120e!important;
+}
+.gallery-art,
+.archive-mark,
+.media-action{
+  display:none!important;
+}
+
+.motion-preview{
+  position:absolute;
+  inset:0;
+  display:grid;
+  place-items:center;
+}
+.motion-preview b{
+  position:relative;
+  z-index:3;
+  width:42px;
+  height:42px;
+  display:grid;
+  place-items:center;
+  border:1px solid rgba(239,239,231,.56);
+  border-radius:50%;
+  background:rgba(6,6,6,.54);
+  color:#efefe7;
+  font-size:12px;
+  font-weight:500;
+  transition:transform .25s ease,border-color .25s ease,color .25s ease,background .25s ease;
+}
+.motion-ring{
+  position:absolute;
+  width:110px;
+  height:110px;
+  animation:mediaOrbit 3.2s linear infinite;
+}
+.motion-ring i{
+  --dot:9px;
+  position:absolute;
+  left:50%;
+  top:50%;
+  width:var(--dot);
+  height:var(--dot);
+  margin:calc(var(--dot) / -2);
+  border-radius:50%;
+  background:#ccd2b1;
+  transform-origin:0 0;
+  opacity:.18;
+}
+.motion-ring i:nth-child(1){transform:rotate(0deg) translateY(-48px);opacity:1}
+.motion-ring i:nth-child(2){transform:rotate(45deg) translateY(-48px);opacity:.86}
+.motion-ring i:nth-child(3){transform:rotate(90deg) translateY(-48px);opacity:.7}
+.motion-ring i:nth-child(4){transform:rotate(135deg) translateY(-48px);opacity:.54}
+.motion-ring i:nth-child(5){transform:rotate(180deg) translateY(-48px);opacity:.4}
+.motion-ring i:nth-child(6){transform:rotate(225deg) translateY(-48px);opacity:.3}
+.motion-ring i:nth-child(7){transform:rotate(270deg) translateY(-48px);opacity:.23}
+.motion-ring i:nth-child(8){transform:rotate(315deg) translateY(-48px);opacity:.18}
+
+.video-motion .motion-ring i:nth-child(1),
+.video-motion .motion-ring i:nth-child(2){background:#ccd2b1}
+.video-motion .motion-ring i:nth-child(3),
+.video-motion .motion-ring i:nth-child(4){background:#8f985c}
+.video-motion .motion-ring i:nth-child(5),
+.video-motion .motion-ring i:nth-child(6){background:#5b2732}
+
+.gallery-motion .motion-ring i{background:#ccd2b1}
+.gallery-motion .motion-ring i:nth-child(even){background:#5b2732}
+.archive-motion .motion-ring i{background:#545b33}
+.archive-motion .motion-ring i:nth-child(odd){background:#efefe7}
+
+.media-card:hover .motion-ring{
+  animation-duration:1.7s;
+}
+.media-card:hover .motion-preview b{
+  transform:scale(1.06);
+  border-color:#ccd2b1;
+  color:#060606;
+  background:#ccd2b1;
+}
+
+@keyframes mediaOrbit{
+  to{transform:rotate(360deg)}
+}
+
+@media (prefers-reduced-motion: reduce){
+  .motion-ring{animation:none}
+  .media-card:hover .motion-preview b{transform:none}
+}
