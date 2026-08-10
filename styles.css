@@ -176,3 +176,83 @@
   .motion-ring{animation:none}
   .media-card:hover .motion-preview b{transform:none}
 }
+
+
+/* BLURRED COMMON MEDIA PREVIEW — fills the empty feel while keeping one unified visual language */
+.media-card .media-preview{
+  background:
+    linear-gradient(135deg, rgba(84,91,51,.34), rgba(91,39,50,.28)),
+    #11120e !important;
+}
+
+.media-card .media-preview::before{
+  content:""!important;
+  display:block!important;
+  position:absolute;
+  inset:-12%;
+  z-index:0;
+  background:
+    radial-gradient(circle at 22% 24%, rgba(239,239,231,.28) 0 7%, transparent 18%),
+    radial-gradient(circle at 72% 36%, rgba(204,210,177,.24) 0 9%, transparent 22%),
+    radial-gradient(circle at 56% 78%, rgba(91,39,50,.34) 0 12%, transparent 28%),
+    linear-gradient(120deg, #161913 0%, #2c3020 38%, #30161c 68%, #0d0e0c 100%);
+  filter: blur(26px) saturate(.78);
+  transform: scale(1.14);
+  opacity:.9;
+}
+
+.media-card .media-preview::after{
+  content:""!important;
+  display:block!important;
+  position:absolute;
+  inset:0;
+  z-index:1;
+  background:
+    linear-gradient(to bottom, rgba(6,6,6,.08), rgba(6,6,6,.34)),
+    repeating-linear-gradient(
+      90deg,
+      rgba(255,255,255,.018) 0,
+      rgba(255,255,255,.018) 1px,
+      transparent 1px,
+      transparent 4px
+    );
+}
+
+.motion-preview{z-index:2}
+.media-index{z-index:4}
+
+.media-card:hover .media-preview::before{
+  filter:blur(21px) saturate(.92);
+  transform:scale(1.1);
+  opacity:1;
+}
+
+.gallery-preview::before,
+.archive-preview::before{
+  display:block!important;
+}
+.gallery-preview::after,
+.archive-preview::after{
+  display:block!important;
+}
+
+/* small media-type variation while retaining the same blurred preview system */
+.gallery-preview::before{
+  background:
+    radial-gradient(circle at 28% 32%, rgba(239,239,231,.32) 0 8%, transparent 20%),
+    radial-gradient(circle at 68% 68%, rgba(204,210,177,.28) 0 11%, transparent 25%),
+    linear-gradient(135deg,#151811,#545b33 48%,#5b2732 100%);
+}
+
+.archive-preview::before{
+  background:
+    radial-gradient(circle at 50% 44%, rgba(204,210,177,.28) 0 10%, transparent 24%),
+    linear-gradient(135deg,#0f100d,#26291d 52%,#15110f 100%);
+}
+
+@media (prefers-reduced-motion: reduce){
+  .media-card:hover .media-preview::before{
+    filter:blur(26px) saturate(.78);
+    transform:scale(1.14);
+  }
+}
