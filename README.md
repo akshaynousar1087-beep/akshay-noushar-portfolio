@@ -1,16 +1,23 @@
-# Akshay Noushar Portfolio — Editorial Multipage V1
+# Akshay Noushar — Portfolio Production Master
 
-A minimal, cinematic, multi-page portfolio rebuilt from the verified Production Master.
+This folder is the clean production baseline reconstructed from the GLASS_GALLERY_FINAL build.
 
-## Pages
-- Home — identity, selected work, short about, Let's Connect CTA
-- Work — full selected work grid
-- Photography — dedicated image-led gallery
-- About — story and practice
-- Contact — direct links and project enquiry form
+## Locked assets
+- `assets/previews/video-preview.jpg` — approved video preview artwork
+- `assets/previews/gallery-preview.jpg` — approved gallery/image preview artwork
 
-## Direction
-Dark editorial layout, large typography, restrained lavender accent, strong negative space, image-first hierarchy.
+## Preserved
+- Existing portfolio sections, selected-work destinations, contact information, typography, layout and archive treatment.
+- The enquiry form remains front-end only until the Supabase integration stage.
 
-## Backend
-The enquiry form remains intentionally frontend-only in V1. Supabase integration should be added after visual/browser QA.
+## Recovery changes
+- Rebuilt the Selected Work HTML as valid, balanced card markup.
+- Removed malformed duplicate closing tags around Gallery and Archive cards.
+- Replaced the experimental video/gallery preview internals with the approved preview artwork.
+- Kept Archive as its own treatment.
+
+## Next production stages
+1. Browser QA: desktop + mobile.
+2. Establish GitHub repository as canonical source.
+3. Add Supabase schema, RLS and enquiry submission.
+4. Deploy production from GitHub.
