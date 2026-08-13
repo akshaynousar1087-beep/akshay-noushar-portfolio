@@ -1,8 +1,9 @@
 # Changelog
 
-## Production Master 1.0 — 2026-08-11
-- Recovered clean baseline from GLASS_GALLERY_FINAL.
-- Corrected Selected Work DOM structure.
-- Integrated approved Video Preview and Gallery Preview assets.
-- Preserved Archive card as a distinct external archive presentation.
-- Added production README and change log.
+## Editorial Multipage V1
+- Rebuilt one-page portfolio into a five-page architecture.
+- Reduced homepage content to identity, 3 selected works, short about and Let's Connect.
+- Added dedicated Work, Photography, About and Contact pages.
+- Preserved approved Video Preview and Gallery Preview assets.
+- Preserved all existing selected-work URLs and direct contact details.
+- Kept enquiry submission frontend-only pending Supabase integration.

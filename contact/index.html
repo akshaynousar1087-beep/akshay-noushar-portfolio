@@ -3,55 +3,30 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#090909">
-<meta name="description" content="Akshay Noushar — Artist, Visual Storyteller & Creative Director.">
+<meta name="theme-color" content="#080808">
+<meta name="description" content="Akshay Noushar — Artist, Visual Storyteller and Creative Director. Selected film, cinematography, photography and creative work.">
 <title>Contact — Akshay Noushar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../styles.css">
 </head><body><div id='top'></div><header class="site-header">
-<a class="identity" href="../index.html" aria-label="Akshay Noushar home">
-<span class="identity-name">AKSHAY NOUSHAR</span>
-<span class="identity-role">ARTIST · VISUAL STORYTELLER · CREATIVE DIRECTOR</span>
-</a>
-<button class="menu-toggle" type="button" aria-expanded="false" aria-label="Open navigation">MENU</button>
-<nav class="main-nav" aria-label="Primary navigation">
+<a class="brand" href="../index.html"><strong>AKSHAY NOUSHAR</strong><span>ARTIST · VISUAL STORYTELLER · CREATIVE DIRECTOR</span></a>
+<button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">MENU</button>
+<nav>
 <a href="../work/">Work</a>
+<a href="../photography/">Photography</a>
 <a href="../about/">About</a>
 <a href="../contact/">Contact</a>
 </nav>
 </header>
-<main class="page">
-<section class="page-intro contact-intro">
-<p class="section-index">03 / CONTACT</p>
-<h1>LET’S MAKE<br>SOMETHING.</h1>
-<div><p>For selected freelance work, productions, creative direction and collaborations.</p></div>
-</section>
-
-<section class="contact-grid">
-<div class="contact-direct">
-<img src="../assets/akshay-about.jpg" alt="Akshay Noushar">
-<p class="section-index">DIRECT</p>
-<a href="mailto:akshay@flickus.world">akshay@flickus.world ↗</a>
-<a href="https://wa.me/917994401087" target="_blank" rel="noopener">WhatsApp · +91 79944 01087 ↗</a>
-<a href="tel:+919562801087">Call · +91 95628 01087</a>
-<span>Kerala, India · Available for travel</span>
-</div>
-
-<form class="contact-form" id="enquiry-form">
-<p class="section-index">PROJECT ENQUIRY</p>
-<label><span>Name</span><input name="name" autocomplete="name" required></label>
-<label><span>Email</span><input name="email" type="email" autocomplete="email" required></label>
-<label><span>Phone</span><input name="phone" type="tel" autocomplete="tel"></label>
-<label><span>Project</span><select name="project_type" required><option value="" selected disabled>Choose one</option><option>Photography</option><option>Cinematography</option><option>Direction</option><option>Creative Direction</option><option>Editing / Post-production</option><option>Other</option></select></label>
-<label><span>Tell me about it</span><textarea name="message" rows="5" required></textarea></label>
-<button type="submit">SEND ENQUIRY ↗</button>
-<p class="form-status" id="form-status" aria-live="polite"></p>
-</form>
-</section>
+<main class="page-shell"><section class="page-hero contact-hero"><p class="kicker">04 / Contact</p><h1>LET’S MAKE<br>SOMETHING.</h1><p>Selected freelance projects, productions and creative collaborations.</p></section>
+<section class="contact-layout"><div class="contact-details"><img src="../assets/akshay-about.jpg" alt="Akshay Noushar"><a href="mailto:akshay@flickus.world">akshay@flickus.world ↗</a><a href="https://wa.me/917994401087" target="_blank" rel="noopener">WhatsApp · +91 79944 01087 ↗</a><a href="tel:+919562801087">Call · +91 95628 01087</a><span>Kerala, India · Available for travel</span></div>
+<form id="enquiry-form" class="enquiry-form"><p class="kicker">Project enquiry</p><label>Name<input name="name" required></label><label>Email<input name="email" type="email" required></label><label>Phone<input name="phone" type="tel"></label><label>Project<select name="project_type" required><option value="" disabled selected>Select</option><option>Photography</option><option>Cinematography</option><option>Direction</option><option>Editing / Post-production</option><option>Creative Direction</option><option>Other</option></select></label><label>Project note<textarea name="message" rows="4" required></textarea></label><button type="submit">SEND ENQUIRY ↗</button><p id="form-status" class="form-status" aria-live="polite"></p></form></section>
 </main><footer class="site-footer">
-<div>© <span data-year></span> AKSHAY NOUSHAR</div>
-<div>KERALA, INDIA · AVAILABLE FOR TRAVEL</div>
-<a href="#top">BACK TO TOP ↑</a>
+<span>© <span id="year"></span> Akshay Noushar</span>
+<span>Kerala, India · Available for travel</span>
+<a href="#top">TOP ↑</a>
 </footer>
 <script src="../script.js"></script>
-</body>
-</html>
+</body></html>
